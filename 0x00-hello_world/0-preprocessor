@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Set the value of $CFILE to "main.c"
+export CFILE=main.c
+
+# Run the preprocessor and save the output in file "c"
+gcc -E "$CFILE" -o c <<EOF
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
+EOF
